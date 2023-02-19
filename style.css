@@ -1,0 +1,177 @@
+nav.navbar.bg-body-tertiary.fixed-top {
+    border-bottom: 2px solid #737373;
+}
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    position: relative;
+    background-image: url("img/map7.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 100vh;
+}
+
+
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+#borders {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+p {
+    font-family: 'emoji', sans-serif;
+    letter-spacing: 1px;
+    font-size: 21px;
+    font-weight: 600;
+    color: initial;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+button.navbar-toggler {
+    border: 2px solid dimgrey;
+}
+
+.navbar-brand_image {
+    width: 128px;
+    transition: 450ms;
+    cursor: pointer;
+}
+
+.navbar-brand_image:hover {
+    transform: scale(1.1);
+}
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    box-sizing: border-box;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.page-header, .page-footer {
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.page-body {
+    flex-grow: 1;
+}
+
+.nav-link {
+    transition: 300ms ease-in-out;
+}
+
+.nav-link:hover {
+    transform: scale(1.03);
+}
